@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+<title>welcome</title>
+</head>
+<body>
+
+<section class="banner d-flex justify-content-center align-items-center">
+<div class="text-center">
+		
+		<h1>All Movies</h1>
+ <div class="row">
+  
+		
+ 	<div class="col-md-6 col-md-6"  th:each="m : ${allMovies}">
+ 	<div class="card ml-3">
+ 	<div class="card-block" >
+ 	
+	
+		
+			<div class="card-title pd-8" >
+			
+				<span th:text="${m.movieName}"></span>
+			
+			</div>
+			<div class="card-text"><span th:text="${m.rating}"></span></div>
+		
+			<div class="card-text"><span th:text="${m.yearReleased}"></span></div>
+			
+			<div class="card-text"><span th:text="${m.about}"></span></div>
+			
+		
+		
+ 	
+ 	</div>
+ 	</div>
+ 	</div>
+ 	
+ </div>
+
+</div>
+
+</section>
+
+
+</body>
+</html>
